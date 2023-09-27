@@ -1,7 +1,12 @@
 """Скрипт для заполнения данными таблиц в БД Postgres."""
 import psycopg2
 import csv
-from help import host, database, user, password
+import os
+
+host = os.environ['host']
+database = os.environ['host']
+user = os.environ['user']
+password = os.environ['password']
 
 conn = psycopg2.connect(host=host, database=database, user=user, password=password)
 
